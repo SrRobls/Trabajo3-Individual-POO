@@ -1,0 +1,41 @@
+@startuml
+
+
+Class Circulo{
+    - Double radio
+    + Double calcularArea()
+    + Double calcularPerimetro()
+}
+
+Class Cuadrado{
+    - Double lado
+    + Double calcularArea()
+    + Double calcularPerimetro()
+}
+
+Class Rectangulo{
+    - Double base
+    - Double altura
+    + Double calcularArea()
+    + Double calcularPerimetro()
+}
+
+Class TrianguloRectangulo{
+    - Double base
+    - Double altura
+    + Double calcularHipotenusa()
+    + String determinarTipoTriangulo()
+    + Double calcularArea()
+    + Double calcularPerimetro()
+}
+
+class PruebaFiguras{
+    + void main()
+}
+
+
+PruebaFiguras -UP- Circulo
+PruebaFiguras -left- Cuadrado
+PruebaFiguras -down- Rectangulo
+PruebaFiguras -right- TrianguloRectangulo
+@enduml
